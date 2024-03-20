@@ -1,0 +1,6 @@
+
+GET https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&pageNumber=1&rowsPerPage=10&fields=name,symbol,current_price,high_24h,low_24h,price_change_percentage_24h
+
+###
+GET https://api.coingecko.com/api/v3/coins/bitcoin?x_cg_demo_api_key=CG-dN7Q42jBmP77q26DsTAaVjNx
+

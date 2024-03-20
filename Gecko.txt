@@ -1,0 +1,32 @@
+2. Making an API request
+Root URL for Demo Plan API: https://api.coingecko.com/api/v3
+You will be using the newly created API Key as query parameter. Request Example:
+curl https://api.coingecko.com/api/v3/ping?x_cg_demo_api_key=YOUR_API_KEY
+You can check list of all available endpoints here in our official documentation: https://docs.coingecko.com/v3.0.1/reference/introduction
+
+If this is your first time using the Demo API key, you can supply API Key to the root URL using one of these ways:
+
+Header: x-cg-demo-api-key
+Query String Parameter: x_cg_demo_api_key
+
+# Ping
+https://api.coingecko.com/api/v3/ping?x_cg_demo_api_key=CG-dN7Q42jBmP77q26DsTAaVjNx
+
+# List of all coins ( per page 2 | page 1) Endpoint /coins/markets
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=2&page=1&x_cg_demo_api_key=CG-dN7Q42jBmP77q26DsTAaVjNx
+● The name
+● The symbol
+● The current price
+● The highest price in the last 24 hours
+● The lower price in the last 24 hours
+● The price change in percentage of the last 24 hours
+
+# Details Page - Endpoint /coins/{id}
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=nano&x_cg_demo_api_key=CG-dN7Q42jBmP77q26DsTAaVjNx
+The current price of the coin (market_data.current_price.{currency})
+● Coin name
+● Coin description
+● Price change on the last 24 hours, 7 days, 14 days, 1 month, 2 months, 200 days, 1 year
+
+● The highest price on the last day (high_24h)
+● The lowest price on the last day (low_24h)
