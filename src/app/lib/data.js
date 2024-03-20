@@ -9,14 +9,9 @@ export async function fetchCoinsList(query, currentPage) {
     await new Promise((res) => setTimeout(res, 1000));
     const ITEMS_PER_PAGE = 12;
 
-    // const urlPrefix = "http://localhost:3000/api";
-    // const url = `${urlPrefix}?pageNumber=${currentPage}&rowsPerPage=${ITEMS_PER_PAGE}&fields=name,symbol,current_price,high_24h,low_24h,price_change_percentage_24h&query=${query}`;
-
     const apiAddress = process.env.COIN_GECKO_API_URL;
     const apiKey = process.env.COIN_GECKO_API_KEY;
     const currency = "usd";
-    // const rowsPerPage = searchParams.get("rowsPerPage");
-    // const pageNumber = searchParams.get("pageNumber");
     const fields =
       "name,symbol,current_price,high_24h,low_24h,price_change_percentage_24h";
     query = query.toLowerCase();

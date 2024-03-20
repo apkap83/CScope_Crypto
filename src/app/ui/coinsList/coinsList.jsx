@@ -51,19 +51,19 @@ async function CoinList({ query, currentPage }) {
                   <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
                     Name
                   </th>
-                  <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                  <th scope="col" className="px-2 py-5 font-medium ">
                     Symbol
                   </th>
-                  <th scope="col" className="px-3 py-5 font-medium">
+                  <th scope="col" className="px-3 py-5 font-medium text-right">
                     Current Price
                   </th>
-                  <th scope="col" className="px-3 py-5 font-medium">
+                  <th scope="col" className="px-3 py-5 font-medium text-right">
                     High 24h
                   </th>
-                  <th scope="col" className="px-3 py-5 font-medium">
+                  <th scope="col" className="px-3 py-5 font-medium text-right">
                     Low 24h
                   </th>
-                  <th scope="col" className="px-3 py-5 font-medium">
+                  <th scope="col" className="px-3 py-5 font-medium text-right">
                     % 24h
                   </th>
                 </tr>
@@ -91,18 +91,18 @@ async function CoinList({ query, currentPage }) {
                     <td className="whitespace-nowrap px-3 py-3">
                       <Link href={`/coins/${coin.name}`}>{coin.symbol}</Link>
                     </td>
-                    <td className="whitespace-nowrap px-3 py-3">
+                    <td className="whitespace-nowrap px-3 py-3 text-right">
                       <Link href={`/coins/${coin.id}`}>
                         {coin.current_price}
                       </Link>
                     </td>
-                    <td className="whitespace-nowrap px-3 py-3">
+                    <td className="whitespace-nowrap px-3 py-3 text-right">
                       <Link href={`/coins/${coin.id}`}>{coin.high_24h}</Link>
                     </td>
-                    <td className="whitespace-nowrap px-3 py-3">
+                    <td className="whitespace-nowrap px-3 py-3 text-right">
                       <Link href={`/coins/${coin.id}`}>{coin.low_24h}</Link>
                     </td>
-                    <td className="whitespace-nowrap px-3 py-3">
+                    <td className="whitespace-nowrap px-3 py-3 text-right">
                       <Link href={`/coins/${coin.id}`}>
                         {coin.price_change_percentage_24h?.toFixed(2) + "%"}
                       </Link>
